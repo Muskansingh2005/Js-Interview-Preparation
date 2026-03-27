@@ -14,14 +14,16 @@ const renderTasks = () =>{
     TaskList.innerHTML = '';
     tasks.forEach((task, index) => {
         let li = document.createElement('li');
-        li.innerHTML = task + ' <button onclick="deleteTask('+index+')">Delete</button>';
-        TaskList.appendChild(li);
+li.innerText = task;
+let deleteButton = document.createElement('button');
+deleteButton.innerText = 'Delete';
+deleteButton.addEventListener('click', () => deleteTask(index));
+li.appendChild(deleteButton);
+TaskList.appendChild(li);
     });
 }
 const deleteTask = (index) => {
 tasks.splice(index, 1);
 renderTasks();
 }
-
-
 
