@@ -10,7 +10,7 @@ AddTask.addEventListener('click', function(){
     renderTasks();
 })
 
-let renderTasks = () =>{
+const renderTasks = () =>{
     TaskList.innerHTML = '';
     tasks.forEach((task, index) => {
         let li = document.createElement('li');
@@ -18,8 +18,7 @@ let renderTasks = () =>{
         TaskList.appendChild(li);
     });
 }
-
-let deleteTask = (index) => {
+const deleteTask = (index) => {
 tasks.splice(index, 1);
 renderTasks();
 }
