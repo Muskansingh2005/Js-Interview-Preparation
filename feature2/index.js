@@ -68,3 +68,6 @@ const toggleTask = (index) => {
   renderTasks();
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
+
+
+
