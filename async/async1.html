@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async-code</title>
+  </head>
+  <body>
+    <h1 id="async">Async Code</h1>
+    <button id="load">load Data</button>
+  </body>
+  <script>
+    const sayMuskan = () => {
+        console.log("hello Muskan");
+    }
+    const changedata = function(){
+        document.getElementById("async").innerText = "my js code";
+    }
+
+    const changeMe = setTimeout(changedata, 5000);
+    sayMuskan();
+    document.getElementById("load").addEventListener("click", () => {
+        clearTimeout(changeMe);
+        console.log("STOPPED");
+    })
+    //clearTimeout(changeMe);
+  </script>
+</html>
