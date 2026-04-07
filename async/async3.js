@@ -26,3 +26,4 @@ document.getElementById("start").addEventListener("click", startChangingColor);
 
 document.getElementById("Stop").addEventListener("click", stopChangingColor);
 
+
