@@ -1,6 +1,4 @@
 // const cart = ["shoes","pants","kurta"];
-
-
 // createOrder(cart , function(orderId){
 //     proceedToPayment(orderId);
 // });
@@ -33,7 +31,6 @@
 //         reject("Error occurres");
 //     }
 // });
-
 const promiseOne = new Promise(function(resolve, reject){
     //Do an async task
     //DB calls, cryptography, network
@@ -46,7 +43,6 @@ const promiseOne = new Promise(function(resolve, reject){
 promiseOne.then(function(){
     console.log("Promise consumed");
 })
-
 new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log("Async task 2");
@@ -55,4 +51,10 @@ new Promise(function(resolve, reject){
 }).then(function(){
     console.log("Promise 2 consumed");
 })
+
+
+
+
+
+
 
