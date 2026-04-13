@@ -1,4 +1,3 @@
-
 //destructuring - it is a convenient way of extracting values from arrays or objects and assigning them to variables. It allows us to unpack values from arrays or properties from objects into distinct variables, making our code more concise and readable. Destructuring can be used with both arrays and objects, and it can also be used in function parameters to extract values directly from the arguments passed to the function. This feature is particularly useful when working with complex data structures, as it helps us avoid repetitive code and makes it easier to access the values we need.
 // const course = {
 //   coursename: "javascript",
