@@ -1,15 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habit-Tracker</title>
-</head>
-<body>
-    <h2>Habit Tracker</h2>
-    <input id="input" type="text" placeholder="Enter Habit">
-    <button onclick="addHabit" id="addHabit">Add Habit</button>
-    <ul id="habitList"></ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit-Tracker Pro</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="container">
+      <div class="header">
+        <h1>🎯 Habit Tracker Pro</h1>
+        <p>Build better habits, one day at a time</p>
+      </div>
+
+      <!-- STATISTICS -->
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-number" id="totalStats">0</div>
+          <div class="stat-label">Total Habits</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="completedStats">0</div>
+          <div class="stat-label">Completed Today</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="percentStats">0%</div>
+          <div class="stat-label">Completion Rate</div>
+        </div>
+      </div>
+
+      <!-- INPUT SECTION -->
+      <div class="input-section">
+        <div class="input-wrapper">
+          <input
+            id="habitInput"
+            type="text"
+            placeholder="Enter a new habit (e.g., Drink water, Exercise)"
+            autocomplete="off"
+          />
+          <select id="categorySelect" class="category-select">
+            <option value="health">🏥 Health</option>
+            <option value="fitness">💪 Fitness</option>
+            <option value="learning">📚 Learning</option>
+            <option value="productivity">⚡ Productivity</option>
+            <option value="mindfulness">🧘 Mindfulness</option>
+          </select>
+        </div>
+        <button id="addHabit">+ Add</button>
+      </div>
+
+      <!-- HABITS LIST -->
+      <div class="content">
+        <div id="habitList"></div>
+        <div id="emptyState" class="empty-state" style="display: none">
+          <div class="empty-state-icon">📋</div>
+          <p>No habits yet. Create one to get started!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDIT MODAL -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <h2>✏️ Edit Habit</h2>
+        <input id="editHabitInput" type="text" placeholder="Habit name" />
+        <select id="editCategorySelect" class="category-select">
+          <option value="health">🏥 Health</option>
+          <option value="fitness">💪 Fitness</option>
+          <option value="learning">📚 Learning</option>
+          <option value="productivity">⚡ Productivity</option>
+          <option value="mindfulness">🧘 Mindfulness</option>
+        </select>
+        <div class="modal-actions">
+          <button class="modal-btn-save" onclick="saveEdit()">Save</button>
+          <button class="modal-btn-cancel" onclick="closeEditModal()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
