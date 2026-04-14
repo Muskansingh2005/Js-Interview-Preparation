@@ -32,17 +32,17 @@ const renderTasks = () => {
 
     li.innerText = task.text;
 
-    // ✅ Apply style based on state
+    // Apply style based on state
     if (task.completed) {
       li.style.textDecoration = "line-through";
     }
 
-    // ✅ Toggle task
+    //  Toggle task
     li.addEventListener("click", () => {
       toggleTask(index);
     });
 
-    // ✅ Delete button
+    //  Delete button
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete";
 

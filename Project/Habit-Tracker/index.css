@@ -1,7 +1,4 @@
-/* ========================================
-   HABIT TRACKER PRO - STYLESHEET
-   ======================================== */
-
+/* HABIT TRACKER PRO - STYLESHEET*/
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +24,7 @@ body {
     overflow: hidden;
 }
 
-/* ========== HEADER ========== */
+/*HEADER*/
 .header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -46,7 +43,7 @@ body {
     opacity: 0.9;
 }
 
-/* ========== STATISTICS SECTION ========== */
+/*STATISTICS SECTION*/
 .stats-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,7 +75,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* ========== INPUT SECTION ========== */
+/* INPUT SECTION*/
 .input-section {
     padding: 25px 30px;
     border-bottom: 2px solid #f0f0f0;
@@ -143,7 +140,7 @@ body {
     transform: translateY(0);
 }
 
-/* ========== HABITS LIST SECTION ========== */
+/*HABITS LIST SECTION*/
 .content {
     padding: 20px 30px;
 }
@@ -318,7 +315,7 @@ button.habit-btn {
     color: white;
 }
 
-/* ========== MODAL/EDIT SECTION ========== */
+/*MODAL/EDIT SECTION*/
 .modal {
     display: none;
     position: fixed;
@@ -403,7 +400,7 @@ button.habit-btn {
     background: #e0e0e0;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/*RESPONSIVE DESIGN */
 @media (max-width: 500px) {
     .stats-container {
         grid-template-columns: 1fr;

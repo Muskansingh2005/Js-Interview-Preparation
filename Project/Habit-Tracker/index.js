@@ -1,6 +1,4 @@
-// ========================================
-// 📊 HABIT TRACKER - ENHANCED VERSION
-// ========================================
+// HABIT TRACKER - ENHANCED VERSION
 
 /**
  * Migrates old habit format to new format
