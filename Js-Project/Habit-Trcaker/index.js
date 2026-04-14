@@ -57,9 +57,8 @@ const categoryEmojis = {
 // EDIT STATE
 let editingIndex = null;
 
-// ========================================
+
 // 💾 STORAGE FUNCTIONS
-// ========================================
 
 /**
  * Saves all habits to localStorage
@@ -77,7 +76,6 @@ function getTodayDate() {
   const today = new Date();
   return today.toISOString().split("T")[0];
 }
-
 /**
  * Initializes a habit object with default values
  * @param {string} name - Habit name
@@ -96,9 +94,7 @@ function createHabitObject(name, category) {
   };
 }
 
-// ========================================
-// 📈 STATISTICS FUNCTIONS
-// ========================================
+//  STATISTICS FUNCTIONS
 
 /**
  * Calculates current streak for a habit
@@ -171,9 +167,8 @@ function updateStats() {
   document.getElementById("percentStats").textContent = completionRate + "%";
 }
 
-// ========================================
-// 🎨 RENDER FUNCTIONS
-// ========================================
+
+// RENDER FUNCTIONS
 
 /**
  * Renders all habits to the DOM
@@ -246,9 +241,8 @@ function renderHabits() {
   updateStats();
 }
 
-// ========================================
-// ⚙️ HABIT MANAGEMENT FUNCTIONS
-// ========================================
+// HABIT MANAGEMENT FUNCTIONS
+
 
 /**
  * Adds a new habit
@@ -358,9 +352,7 @@ function saveEdit() {
   renderHabits();
 }
 
-// ========================================
-// 🎯 EVENT LISTENERS
-// ========================================
+//  EVENT LISTENERS
 
 document.getElementById("addHabit").addEventListener("click", addHabitHandler);
 
@@ -378,9 +370,7 @@ document.getElementById("editModal").addEventListener("click", (e) => {
   }
 });
 
-// ========================================
-// 🚀 INITIALIZATION
-// ========================================
+//  INITIALIZATION
 
 // Render habits when page loads
 renderHabits();
