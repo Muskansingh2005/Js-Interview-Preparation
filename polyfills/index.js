@@ -131,4 +131,3 @@ console.log(expensiveItems);
 
 let productNames = cart.map(carts => carts.name);
 console.log(productNames);
-
